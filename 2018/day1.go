@@ -14,5 +14,24 @@ func main() {
 			result += parsedInt
 		}
 	} 
-	fmt.Println(result)
+	fmt.Printf("Part 1 result: %d\n\n", result)
+	seenSet := make(map[int]bool)
+	complete := false
+	result = 0
+	index := 0
+	seenSet[0] = true
+	for !complete {
+		seenSet[result] = true
+		parsedInt, err := strconv.Atoi(input[index])
+		if err == nil {
+			result += parsedInt
+			if index == 1013 {
+				index = 0
+			} else {
+				index += 1
+			}
+			_, complete = seenSet[result]
+		}
+	} 
+	fmt.Printf("Part 2 result: %d", result)
 }
