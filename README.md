@@ -1,4 +1,4 @@
 # Advent of Code
 
-These are solutions to Advent of Code problems. I'll avoid posting any for this year until after the 25th.
+These are solutions to Advent of Code problems.
 http://adventofcode.com/
